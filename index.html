@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Can You Beat the Goalkeeper?</title>
+    <meta name="description" type="A quiz app to test whether you are talented enough to score against the goalkeeper.">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+
+  <body>
+    <main role="main" class="container">
+      <header role="banner" class="header">
+        <h1 class="header"> Welcome to the Ultimate Quiz </h1>
+        <section class="topHead">
+          <img src="Images/soccerBanner.png" alt="soccerBanner">
+        </section>
+
+        <section class="progressBar">
+          <progress class="completion" id="pending" value="1" max ="7"> </progress>
+          <ul>
+            <li class="progress"># of Goals:
+              <span class="goalNumber">0</span>
+            </li>
+            <li class="progress"># of Misses:
+              <span class="missNumber">0</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="mainBox">
+          <h2> Can You Beat the GoalKeeper? </h2>
+          <button type="button" class="startQuiz">START</button>
+          <img src="Images/goalKeeper.png" alt="goalKepper">
+          <section class="soundBox">
+            <audio id="myAudio">
+              <source src="Sounds/whistle.mp3" type="audio/mpeg">
+            </audio>
+            <p> Click the Button to See What Happens!</p>
+
+            <button onclick="playAudio()" type="button"> Play</button>
+        </section>
+
+        <section class="questionBox">
+          <form>
+            <fieldset>
+              <legend class="textQuestion">
+                Now you have earn your team a free kick! The spot is a little bit outside of the penalty box to the left of the goal. While discussing options with your teammates, you notice that goalkeeper is standing more towards the right side of the goal and the players wall has some noticeable whole in between. So, what is your choice this time?
+              </legend>
+              <label>
+                <input type="radio" value="${element}" required>
+                <span>
+                  Hah! Let's beat the keeper at his own mind game by kicking the ball with so much power to the upper right corner of course.
+                </span> <br> <br>
+              </label>
+              <label>
+                <input type="radio" value="${element}" required>
+                <span>
+                  Dang! He might be tricking me not to kick to the left so maybe a shot to the upper left corner would get him.
+                </span> <br> <br>
+              </label>
+              <label>
+                <input type="radio" value="${element}" required>
+                <span>
+                  Dang! He might be tricking me not to kick to the left so maybe a shot to the upper left corner would get him.
+                </span> <br> <br>
+              </label>
+              <label>
+                <input type="radio" value="${element}" required>
+                <span>
+                  Man his mind game is making me pretty nervous. Perhaps I will choose a safe option and put the ball in the middle of the goal.
+                </span> <br> <br>
+              </label>
+              <label>
+                <input type="radio" value="${element}" required>
+                <span>
+                  I have a trick up my sleeve too! I will make a ridiculously slow run towards the ball that makes him become nervous and impatient. Then, I will kick the ball softly to the lower corner or either the right or left.
+                </span> <br> <br>
+              </label>
+              <button type="button" class="finalizeButton">See Result</button>
+            </fieldset>
+          </form> 
+        </section>
+
+        <section class="feedBack">Feedback Right or Wrong section <br> <br>
+          <section> Great Choice! </section>
+          <img src="Images/Goal.png" alt="goal"> 
+          <br> <br> <br>
+          <section> Too bad, you just missed the chance! </section>
+          <img src="Images/Miss.png" alt="miss"> 
+          <br> <br> <br>
+          <button type="button" class="nextButton">Next</button>
+        </section>
+
+        <section class="result">The Result of the Quiz
+          <br> <br> <br>
+          <section> Your Score Was: N/A </section>
+          <br> <br> <br>
+          <section> Great Choices! </section>
+          <img src="Images/Up.png" alt="goal"> 
+          <br> <br> <br>
+          <section> Too bad, You Missed Too Many Chances! </section>
+          <img src="Images/Down.png" alt="miss"> 
+          <br> <br>
+          <section> Do you want to try again? </section>
+          <br>
+          <button type="button" class="restartButton">Retry</button>
+        </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
